@@ -4,6 +4,7 @@
 
 body {
     background-color: #ffccde;
+    font-size: 20px;
 }
 
 .container {
@@ -11,14 +12,6 @@ body {
     margin: 0 auto;
     cursor: pointer;
 }
-
-
-/* .meme_title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-
-} */
 
 .meme {
     padding-bottom: 1em;
@@ -40,41 +33,80 @@ input{
     display: none;
 }
 
-.meme_img {
-    height: 0;
-    /* transition: color 0.5s, padding 0.5s; */
-    overflow: hidden;
-}
-
 label {
     cursor: pointer;
-    transition: color .35s;
 }
-label:hover {
-    color: #FFF;
-}
-input{
-    display: none;
-}
+
+/* .container:before {
+    color: #aaa;
+    content: none;
+} */
+
 label:before {
     content: '\2661';
     float: right;
 }
 
+/* label:hover {
+    content: none;    
+} */
+
 input:checked + label:before {
-    content: '\2764';
-    
+    content: '\2764'; 
+    transition: 0.5s; 
 }
-input:checked + label + .meme_img {
+
+/* input:not(:checked) + label:before {
+    content: '\2764';  
+} */
+
+/* input:checked + label + .meme_img {
     height: auto;
-    margin-top: -5px;
+    margin-top: 1em;
+}  */
+
+.meme_img {
+    margin-top: 1ex;
+    display: none;
+    /* opacity: 0; */
+    /* transition: 0.5s; */
+    /* position: absolute; */
+}
+
+.meme:hover .meme_img {
+    display: block;
+    /* opacity: 1; */
+}
+
+.memes {
+    color: #aaa;    
+}
+
+.memes:hover {
     color: #000;
-    padding: 20px 30px 10px;
 }
 
 
 
+/*Responsive*/
 
+/*992px - 1920px*/
+@media screen and (max-width: 1180px) {
+    body {
+        font-size: 18px;
+    }
+}
 
+/*768px - 992px*/
+@media screen and (max-width: 1080px) {
+    body {
+        font-size: 14px;
+    }
+}
 
-
+/*320px - 576px*/
+@media screen and (max-width: 568px) {
+    body {
+        font-size: 10px;
+    }
+}
