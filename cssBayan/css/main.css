@@ -2,8 +2,41 @@
     box-sizing: border-box;
 }
 
-
+body {
+    background-color: #ffccde;
+}
 
 .container {
-    width: 500px;
+    width: 60%;
+    margin: 0 auto;
 }
+
+.h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.meme_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 1em 0;
+    border-top: #aaaaaa 0.1em solid;
+}
+
+.meme {
+    padding-bottom: 1em;
+}
+
+.meme_img img{
+    width: 60%;
+    display: block;
+	margin: 0 auto;
+}
+
+span {
+    font-weight: 700;
+}
+
+
