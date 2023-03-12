@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffd1dc;
+    font-size: 2rem;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.meme {
+    padding-bottom: 1em;
+    padding: 1em 0;
+    border-top: #ff6b8e 0.1em solid;
+}
+
+.meme_img img{
+    width: 60%;
+    display: block;
+	margin: 0 auto;
+}
+
+label {
+    font-weight: 700;
+    cursor: pointer;    
+}
+
+.label_img {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: block;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+img {
+    border-radius: 1rem;
+}
+
+input{
+    display: none;
+}
+
+label::before {
+    content: '\2662';
+    opacity: 0;
+    float: right;
+}
+
+.container:hover label::before {
+    content: '\2662';
+    float: right; 
+    opacity: 1;
+}
+
+input:checked + label > span {
+    color: #000;
+}
+
+span {
+    color: #d1002a;
+    transition: 1s; 
+}
+
+
+
+.container:hover span {
+    color: #000;
+    transition: 1s; 
+}
+
+input:checked + label::before {
+    transform: rotate(90deg);  
+    transition: 1s; 
+    color: #ff6b8e;
+}
+
+
+input + label::before { 
+    transition: 1s; 
+}
+
+.meme_img {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 1em;
+    transition: padding 1s;
+}
+
+input:checked + label > .meme_img {
+    height: auto;
+    opacity: 1;
+    padding: 1rem 1rem 1rem;
+}
+
+.meme:hover input + label > .meme_img{
+    opacity: 1;
+    height: auto;
+    padding: 1rem 1rem 1rem;
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width: 1920px) {
+
+    .container {
+        width: 70%;
+    }
+
+    body {
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+
+    .container {
+        width: 80%;
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    .meme_img img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .container {
+        width: 90%;
+    }
+
+
+    body {
+        font-size: 14px;
+    }
+
+    .meme_img img{
+        width: 100%;
+    }
+}
+
+
+
+
+
