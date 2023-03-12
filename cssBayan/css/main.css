@@ -104,7 +104,6 @@ input:checked + label > .meme_img {
 
 .meme:hover input + label > .meme_img{
     opacity: 1;
-    /* scale: 1; */
     height: auto;
     padding: 1rem 1rem 1rem;
 }
