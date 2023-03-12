@@ -49,6 +49,12 @@ input{
     display: none;
 }
 
+label::before {
+    content: '\2662';
+    opacity: 0;
+    float: right;
+}
+
 .container:hover label::before {
     content: '\2662';
     float: right; 
@@ -69,12 +75,6 @@ span {
 .container:hover span {
     color: #000;
     transition: 1s; 
-}
-
-label::before {
-    content: '\2662';
-    opacity: 0;
-    float: right;
 }
 
 input:checked + label::before {
@@ -132,6 +132,10 @@ input:checked + label > .meme_img {
     body {
         font-size: 20px;
     }
+
+    .meme_img img{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -140,8 +144,13 @@ input:checked + label > .meme_img {
         width: 90%;
     }
 
+
     body {
         font-size: 14px;
+    }
+
+    .meme_img img{
+        width: 100%;
     }
 }
 
