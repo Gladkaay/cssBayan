@@ -53,7 +53,7 @@ label:before {
 
 input:checked + label:before {
     content: '\2764'; 
-    transition: 0.5s; 
+    /* transition: 0.5s;  */
 }
 
 /* input:not(:checked) + label:before {
@@ -90,22 +90,19 @@ input:checked + label:before {
 
 /*Responsive*/
 
-/*992px - 1920px*/
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1920px) {
     body {
         font-size: 18px;
     }
 }
 
-/*768px - 992px*/
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 820px) {
     body {
         font-size: 14px;
     }
 }
 
-/*320px - 576px*/
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 320px) {
     body {
         font-size: 10px;
     }
